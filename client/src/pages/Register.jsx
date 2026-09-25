@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { Code2, Eye, EyeOff } from 'lucide-react'
+import { Eye, EyeOff, User, Mail, Lock, ArrowRight } from 'lucide-react'
 import useAuthStore from '../store/authStore'
 import toast from 'react-hot-toast'
+import AuthShell, { GoogleButton, inputCls } from '../components/UI/AuthShell'
 
 const Register = () => {
   const [name, setName] = useState('')
@@ -32,117 +33,98 @@ const Register = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
-      <div className="w-full max-w-md">
+    <AuthShell quote={['Two keyboards.', 'One file.']}>
+      <h1 className="text-4xl font-bold tracking-tight">Create your account</h1>
+      <p className="text-ink/60 mt-2 mb-8">It's free. Your first room is one click away.</p>
 
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <Code2 size={28} className="text-violet-500" />
-          <span className="text-xl font-bold text-white">CodeSync</span>
-        </div>
+      <GoogleButton />
 
-        <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
-
-          <div className="text-center mb-7">
-            <h1 className="text-2xl font-bold text-white">Create account</h1>
-            <p className="text-gray-400 text-sm mt-1">Start collaborating in seconds</p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                Full name
-              </label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Gupta Prasad Adhikari"
-                className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all text-sm"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                Email address
-              </label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all text-sm"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                Password
-              </label>
-              <div className="relative">
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="At least 6 characters"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all text-sm"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors"
-                >
-                  {showPassword ? <EyeOff size={17} /> : <Eye size={17} />}
-                </button>
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-violet-600 hover:bg-violet-700 disabled:bg-violet-800 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-colors text-sm mt-2"
-            >
-              {isLoading ? (
-                <span className="flex items-center justify-center gap-2">
-                  <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                  Creating account...
-                </span>
-              ) : 'Create Account'}
-            </button>
-
-          </form>
-
-          <div className="flex items-center gap-3 my-5">
-            <div className="flex-1 h-px bg-gray-800"></div>
-            <span className="text-gray-600 text-xs">or</span>
-            <div className="flex-1 h-px bg-gray-800"></div>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => window.location.href = `${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/auth/google`}
-            className="w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 rounded-xl transition-colors text-sm"
-          >
-            <svg width="18" height="18" viewBox="0 0 48 48">
-              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-            </svg>
-            Continue with Google
-          </button>
-
-        </div>
-
-        <p className="text-center text-gray-500 text-sm mt-5">
-          Already have an account?{' '}
-          <Link to="/login" className="text-violet-400 hover:text-violet-300 font-medium transition-colors">
-            Sign in
-          </Link>
-        </p>
-
+      <div className="flex items-center gap-3 my-6">
+        <div className="flex-1 h-px bg-ink/10"></div>
+        <span className="text-ink/40 text-xs uppercase tracking-widest">or</span>
+        <div className="flex-1 h-px bg-ink/10"></div>
       </div>
-    </div>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="name" className="block text-sm font-semibold mb-1.5">Full name</label>
+          <div className="relative">
+            <User size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-ink/40" />
+            <input
+              id="name"
+              type="text"
+              autoComplete="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Gupta Prasad Adhikari"
+              className={inputCls}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="email" className="block text-sm font-semibold mb-1.5">Email</label>
+          <div className="relative">
+            <Mail size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-ink/40" />
+            <input
+              id="email"
+              type="email"
+              autoComplete="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com"
+              className={inputCls}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="password" className="block text-sm font-semibold mb-1.5">Password</label>
+          <div className="relative">
+            <Lock size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-ink/40" />
+            <input
+              id="password"
+              type={showPassword ? 'text' : 'password'}
+              autoComplete="new-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="At least 6 characters"
+              className={`${inputCls} pr-12`}
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-ink/40 hover:text-ink transition-colors"
+            >
+              {showPassword ? <EyeOff size={17} /> : <Eye size={17} />}
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          disabled={isLoading}
+          className="w-full flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition-colors mt-2"
+        >
+          {isLoading ? (
+            <>
+              <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+              Creating account...
+            </>
+          ) : (
+            <>Create account <ArrowRight size={17} /></>
+          )}
+        </button>
+      </form>
+
+      <p className="text-center text-ink/60 text-sm mt-8">
+        Already on CodeSync?{' '}
+        <Link to="/login" className="text-ink font-semibold underline underline-offset-4 decoration-orange-500 hover:text-orange-600">
+          Log in
+        </Link>
+      </p>
+    </AuthShell>
   )
 }
 
