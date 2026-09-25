@@ -222,7 +222,7 @@ const Landing = () => {
             <span className="font-semibold">CodeSync</span>
           </div>
           <p className="text-gray-500 text-sm">
-            Built by Deepak Kumar • Real-Time Collaborative Code Editor
+            Deployed &amp; maintained by Gupta Prasad Adhikari • Original CodeSync by Deepak Kumar
           </p>
         </div>
       </footer>

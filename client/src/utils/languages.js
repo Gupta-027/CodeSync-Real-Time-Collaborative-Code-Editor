@@ -10,7 +10,7 @@ export const LANGUAGES = [
     return \`Hello, \${name}!\`;
   }
   
-  console.log(greet("Deepak"));`,
+  console.log(greet("Gupta"));`,
     },
     {
       value: 'python',
@@ -22,7 +22,7 @@ export const LANGUAGES = [
   def greet(name):
       return f"Hello, {name}!"
   
-  print(greet("Deepak"))`,
+  print(greet("Gupta"))`,
     },
     {
       value: 'cpp',
@@ -55,7 +55,7 @@ export const LANGUAGES = [
     return \`Hello, \${name}!\`;
   };
   
-  console.log(greet("Deepak"));`,
+  console.log(greet("Gupta"));`,
     },
     {
       value: 'go',
