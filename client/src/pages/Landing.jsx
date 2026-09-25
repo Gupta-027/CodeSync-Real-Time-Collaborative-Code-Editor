@@ -95,6 +95,9 @@ const Landing = () => {
             <a href="#faq" className="hover:text-ink transition-colors">FAQ</a>
           </div>
           <div className="flex items-center gap-2">
+            <span className="hidden lg:block text-sm text-ink/50 mr-3 pr-5 border-r border-ink/15">
+              Built by <span className="text-ink font-medium">Gupta Prasad Adhikari</span>
+            </span>
             {!token && (
               <button onClick={() => navigate('/login')} className="hidden sm:block text-sm font-medium px-4 py-2 hover:text-orange-600 transition-colors">
                 Log in
