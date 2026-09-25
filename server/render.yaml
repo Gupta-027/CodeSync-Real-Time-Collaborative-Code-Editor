@@ -10,10 +10,10 @@ services:
         value: production
 
       - key: BACKEND_URL
-        value: https://codesync-5vs9.onrender.com
+        value: https://YOUR-BACKEND.onrender.com
 
       - key: CLIENT_URL
-        value: https://codesync-lyart.vercel.app
+        value: https://YOUR-FRONTEND.vercel.app
 
       - key: GOOGLE_CLIENT_ID
         sync: false
