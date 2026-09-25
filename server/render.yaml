@@ -10,7 +10,7 @@ services:
         value: production
 
       - key: BACKEND_URL
-        value: https://YOUR-BACKEND.onrender.com
+        value: https://codesync-real-time-collaborative-code-0y4g.onrender.com
 
       - key: CLIENT_URL
         value: https://YOUR-FRONTEND.vercel.app
