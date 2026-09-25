@@ -117,7 +117,7 @@ const Dashboard = () => {
       <nav className="bg-gray-900 border-b border-gray-800 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Code2 className="text-blue-500" size={28} />
+            <Code2 className="text-violet-500" size={28} />
             <span className="text-xl font-bold">CodeSync</span>
           </div>
 
@@ -166,7 +166,7 @@ const Dashboard = () => {
     </button>
     <button
       onClick={() => setShowCreateModal(true)}
-      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium flex-1 sm:flex-none justify-center"
+      className="flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium flex-1 sm:flex-none justify-center"
     >
       <Plus size={18} />
       Create Room
@@ -196,7 +196,7 @@ const Dashboard = () => {
             </p>
             <button
               onClick={() => setShowCreateModal(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+              className="bg-violet-600 hover:bg-violet-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
             >
               Create your first room
             </button>
@@ -208,14 +208,14 @@ const Dashboard = () => {
               <div
                 key={room._id}
                 onClick={() => handleEnterRoom(room._id)}
-                className="bg-gray-900 border border-gray-800 hover:border-blue-500 rounded-xl p-5 cursor-pointer transition-all hover:shadow-lg hover:shadow-blue-500/10 group"
+                className="bg-gray-900 border border-gray-800 hover:border-violet-500 rounded-xl p-5 cursor-pointer transition-all hover:shadow-lg hover:shadow-violet-500/10 group"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors truncate pr-2">
+                  <h3 className="font-semibold text-white group-hover:text-violet-400 transition-colors truncate pr-2">
                     {room.name}
                   </h3>
                   {room.userRole === 'owner' && (
-                    <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full shrink-0">
+                    <span className="text-xs bg-violet-500/20 text-violet-400 px-2 py-0.5 rounded-full shrink-0">
                       Owner
                     </span>
                   )}
@@ -234,7 +234,7 @@ const Dashboard = () => {
                 <div className="flex items-center justify-between pt-3 border-t border-gray-800">
                   <button
                     onClick={(e) => handleCopyInviteCode(room.inviteCode, e)}
-                    className="flex items-center gap-2 text-gray-500 hover:text-blue-400 transition-colors text-xs"
+                    className="flex items-center gap-2 text-gray-500 hover:text-violet-400 transition-colors text-xs"
                   >
                     <Copy size={12} />
                     <span className="font-mono">{room.inviteCode}</span>
@@ -282,7 +282,7 @@ const Dashboard = () => {
                   onChange={(e) => setNewRoomName(e.target.value)}
                   placeholder="My Awesome Project"
                   autoFocus
-                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 transition-colors"
                 />
               </div>
 
@@ -293,7 +293,7 @@ const Dashboard = () => {
                 <select
                   value={newRoomLanguage}
                   onChange={(e) => setNewRoomLanguage(e.target.value)}
-                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-violet-500 transition-colors"
                 >
                   {LANGUAGES.map((lang) => (
                     <option key={lang.value} value={lang.value}>
@@ -314,7 +314,7 @@ const Dashboard = () => {
                 <button
                   type="submit"
                   disabled={creating}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 text-white py-3 rounded-lg transition-colors font-medium"
+                  className="flex-1 bg-violet-600 hover:bg-violet-700 disabled:bg-violet-800 text-white py-3 rounded-lg transition-colors font-medium"
                 >
                   {creating ? 'Creating...' : 'Create Room'}
                 </button>
@@ -349,7 +349,7 @@ const Dashboard = () => {
                   onChange={(e) => setInviteCode(e.target.value.toUpperCase())}
                   placeholder="e.g. F47AC10B"
                   autoFocus
-                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors font-mono tracking-widest text-center text-lg"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 transition-colors font-mono tracking-widest text-center text-lg"
                 />
               </div>
 
@@ -364,7 +364,7 @@ const Dashboard = () => {
                 <button
                   type="submit"
                   disabled={joining}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 text-white py-3 rounded-lg transition-colors font-medium"
+                  className="flex-1 bg-violet-600 hover:bg-violet-700 disabled:bg-violet-800 text-white py-3 rounded-lg transition-colors font-medium"
                 >
                   {joining ? 'Joining...' : 'Join Room'}
                 </button>

@@ -56,7 +56,7 @@ const OutputPanel = () => {
       <div className="flex-1 overflow-auto p-4 font-mono text-sm">
         {isRunning ? (
           <div className="flex items-center gap-3 text-gray-400">
-            <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-4 h-4 border-2 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
             <span>Running your code...</span>
           </div>
         ) : output ? (

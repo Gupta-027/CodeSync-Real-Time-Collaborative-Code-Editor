@@ -13,7 +13,7 @@ const VersionHistory = ({ onRestore }) => {
     <div className="w-72 bg-gray-900 border-l border-gray-800 flex flex-col shrink-0 animate-slide-in">
       <div className="flex items-center justify-between px-4 py-3 border-b border-gray-800">
         <div className="flex items-center gap-2">
-          <History size={16} className="text-purple-400" />
+          <History size={16} className="text-pink-400" />
           <span className="text-white font-medium text-sm">
             Version History
           </span>
@@ -66,7 +66,7 @@ const VersionHistory = ({ onRestore }) => {
                       className={`text-xs px-1.5 py-0.5 rounded font-medium ${
                         snapshot.saveType === "auto"
                           ? "bg-gray-700 text-gray-400"
-                          : "bg-purple-500/20 text-purple-400"
+                          : "bg-pink-500/20 text-pink-400"
                       }`}
                     >
                       {snapshot.saveType === "auto" ? "auto" : "manual"}
@@ -75,7 +75,7 @@ const VersionHistory = ({ onRestore }) => {
 
                   <button
                     onClick={() => onRestore(snapshot)}
-                    className="flex items-center gap-1 text-xs text-gray-500 hover:text-blue-400 transition-colors opacity-0 group-hover:opacity-100"
+                    className="flex items-center gap-1 text-xs text-gray-500 hover:text-violet-400 transition-colors opacity-0 group-hover:opacity-100"
                   >
                     <RotateCcw size={11} />
                     <span>Restore</span>
@@ -112,7 +112,7 @@ const VersionHistory = ({ onRestore }) => {
       {isSaving && (
         <div className="px-4 py-3 border-t border-gray-800">
           <div className="flex items-center gap-2 text-gray-400 text-xs">
-            <div className="w-3 h-3 border-2 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-3 h-3 border-2 border-pink-400 border-t-transparent rounded-full animate-spin"></div>
             <span>Saving...</span>
           </div>
         </div>

@@ -88,14 +88,14 @@ const FileExplorer = ({ roomName, onFileSelect }) => {
   const getFileIconColor = (language) => {
     const colors = {
       javascript: "text-yellow-400",
-      typescript: "text-blue-400",
+      typescript: "text-violet-400",
       python: "text-green-400",
-      cpp: "text-purple-400",
+      cpp: "text-pink-400",
       java: "text-orange-400",
       go: "text-cyan-400",
       rust: "text-orange-500",
       html: "text-red-400",
-      css: "text-blue-300",
+      css: "text-violet-300",
       sql: "text-pink-400",
     };
     return colors[language] || "text-gray-400";
@@ -105,7 +105,7 @@ const FileExplorer = ({ roomName, onFileSelect }) => {
     <div className="w-52 bg-gray-900 border-r border-gray-800 flex flex-col shrink-0">
       <div className="flex items-center justify-between px-3 py-3 border-b border-gray-800">
         <div className="flex items-center gap-2">
-          <FolderOpen size={14} className="text-blue-400" />
+          <FolderOpen size={14} className="text-violet-400" />
           <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider truncate">
             {roomName || "Files"}
           </span>
@@ -116,7 +116,7 @@ const FileExplorer = ({ roomName, onFileSelect }) => {
             setShowNewFileInput(true);
             setTimeout(() => newFileInputRef.current?.focus(), 50);
           }}
-          className="text-gray-500 hover:text-blue-400 transition-colors"
+          className="text-gray-500 hover:text-violet-400 transition-colors"
           title="New file"
         >
           <Plus size={15} />
@@ -133,7 +133,7 @@ const FileExplorer = ({ roomName, onFileSelect }) => {
             }}
             className={`group flex items-center gap-2 px-3 py-1.5 cursor-pointer transition-colors ${
               activeFileId === file._id
-                ? "bg-gray-800 border-l-2 border-blue-500"
+                ? "bg-gray-800 border-l-2 border-violet-500"
                 : "hover:bg-gray-800/50 border-l-2 border-transparent"
             }`}
           >
@@ -152,7 +152,7 @@ const FileExplorer = ({ roomName, onFileSelect }) => {
                 }}
                 onBlur={() => stopRenaming()}
                 onClick={(e) => e.stopPropagation()}
-                className="flex-1 bg-gray-700 text-white text-xs px-1 py-0.5 rounded outline-none border border-blue-500 min-w-0"
+                className="flex-1 bg-gray-700 text-white text-xs px-1 py-0.5 rounded outline-none border border-violet-500 min-w-0"
               />
             ) : (
               <span
@@ -178,7 +178,7 @@ const FileExplorer = ({ roomName, onFileSelect }) => {
                     startRenaming(file._id);
                     setRenameValue(file.name);
                   }}
-                  className="text-gray-600 hover:text-blue-400 transition-colors"
+                  className="text-gray-600 hover:text-violet-400 transition-colors"
                   title="Rename"
                 >
                   <Edit2 size={11} />
@@ -211,7 +211,7 @@ const FileExplorer = ({ roomName, onFileSelect }) => {
               }}
               onBlur={handleCreateFile}
               placeholder="filename.js"
-              className="flex-1 bg-gray-700 text-white text-xs px-1 py-0.5 rounded outline-none border border-blue-500 min-w-0 placeholder-gray-500"
+              className="flex-1 bg-gray-700 text-white text-xs px-1 py-0.5 rounded outline-none border border-violet-500 min-w-0 placeholder-gray-500"
             />
           </div>
         )}

@@ -7,9 +7,9 @@ const FileTabs = ({ onFileSelect }) => {
   const getFileIconColor = (language) => {
     const colors = {
       javascript: "text-yellow-400",
-      typescript: "text-blue-400",
+      typescript: "text-violet-400",
       python: "text-green-400",
-      cpp: "text-purple-400",
+      cpp: "text-pink-400",
       java: "text-orange-400",
     };
     return colors[language] || "text-gray-400";
@@ -26,7 +26,7 @@ const FileTabs = ({ onFileSelect }) => {
           }}
           className={`flex items-center gap-2 px-4 py-2 border-r border-gray-800 cursor-pointer group shrink-0 transition-colors ${
             activeFileId === file._id
-              ? "bg-gray-900 border-t-2 border-t-blue-500"
+              ? "bg-gray-900 border-t-2 border-t-violet-500"
               : "bg-gray-950 hover:bg-gray-900/50 border-t-2 border-t-transparent"
           }`}
         >

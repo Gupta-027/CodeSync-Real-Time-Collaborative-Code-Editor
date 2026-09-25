@@ -38,7 +38,7 @@ const ChatPanel = ({ onSendMessage }) => {
     <div className="w-72 bg-gray-900 border-l border-gray-800 flex flex-col shrink-0 animate-slide-in">
       <div className="flex items-center justify-between px-4 py-3 border-b border-gray-800">
         <div className="flex items-center gap-2">
-          <MessageSquare size={16} className="text-blue-400" />
+          <MessageSquare size={16} className="text-violet-400" />
           <span className="text-white font-medium text-sm">Chat</span>
           {messages.length > 0 && (
             <span className="text-gray-500 text-xs">({messages.length})</span>
@@ -122,7 +122,7 @@ const ChatPanel = ({ onSendMessage }) => {
                   <div
                     className={`px-3 py-2 rounded-2xl text-sm break-words ${
                       isOwnMessage
-                        ? "bg-blue-600 text-white rounded-tr-sm"
+                        ? "bg-violet-600 text-white rounded-tr-sm"
                         : "bg-gray-800 text-gray-200 rounded-tl-sm"
                     } ${message.isOptimistic ? "opacity-70" : "opacity-100"}`}
                   >
@@ -149,7 +149,7 @@ const ChatPanel = ({ onSendMessage }) => {
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
             rows={1}
-            className="flex-1 bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+            className="flex-1 bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-violet-500 transition-colors resize-none"
             style={{
               minHeight: "36px",
               maxHeight: "80px",
@@ -159,7 +159,7 @@ const ChatPanel = ({ onSendMessage }) => {
           <button
             onClick={handleSend}
             disabled={!inputValue.trim()}
-            className="flex items-center justify-center w-9 h-9 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-xl transition-colors shrink-0"
+            className="flex items-center justify-center w-9 h-9 bg-violet-600 hover:bg-violet-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-xl transition-colors shrink-0"
           >
             <Send size={15} />
           </button>

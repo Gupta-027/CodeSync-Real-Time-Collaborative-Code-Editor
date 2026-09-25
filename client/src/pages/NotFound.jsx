@@ -13,8 +13,8 @@ const NotFound = () => {
             404
           </p>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center">
-              <Code2 size={32} className="text-blue-400" />
+            <div className="w-16 h-16 bg-violet-500/10 rounded-2xl flex items-center justify-center">
+              <Code2 size={32} className="text-violet-400" />
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ const NotFound = () => {
           </button>
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl transition-colors font-medium text-sm"
+            className="flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-xl transition-colors font-medium text-sm"
           >
             <Home size={16} />
             Home

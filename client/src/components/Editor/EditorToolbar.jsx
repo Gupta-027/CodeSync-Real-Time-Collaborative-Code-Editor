@@ -25,7 +25,7 @@ const EditorToolbar = ({ roomName, onRun, onLanguageChange, onSave }) => {
           <select
             value={language}
             onChange={(e) => handleLanguageChange(e.target.value)}
-            className="appearance-none bg-gray-800 border border-gray-700 text-white text-sm px-3 py-1.5 pr-8 rounded-lg focus:outline-none focus:border-blue-500 cursor-pointer"
+            className="appearance-none bg-gray-800 border border-gray-700 text-white text-sm px-3 py-1.5 pr-8 rounded-lg focus:outline-none focus:border-violet-500 cursor-pointer"
           >
             {LANGUAGES.map((lang) => (
               <option key={lang.value} value={lang.value}>
@@ -49,9 +49,9 @@ const EditorToolbar = ({ roomName, onRun, onLanguageChange, onSave }) => {
           title="Save snapshot (Ctrl+S)"
         >
           {isSaving ? (
-            <div className="w-3.5 h-3.5 border-2 border-purple-400 border-t-transparent rounded-full animate-spin" />
+            <div className="w-3.5 h-3.5 border-2 border-pink-400 border-t-transparent rounded-full animate-spin" />
           ) : (
-            <Save size={14} className="text-purple-400" />
+            <Save size={14} className="text-pink-400" />
           )}
           <span className="hidden sm:block">
             {isSaving ? "Saving..." : "Save"}
@@ -62,7 +62,7 @@ const EditorToolbar = ({ roomName, onRun, onLanguageChange, onSave }) => {
           onClick={toggleHistory}
           className={`flex items-center gap-2 px-3 py-1.5 rounded-lg transition-colors text-sm ${
             isHistoryOpen
-              ? "bg-purple-600 text-white"
+              ? "bg-pink-600 text-white"
               : "bg-gray-800 hover:bg-gray-700 text-gray-300"
           }`}
           title="Version history"
@@ -78,7 +78,7 @@ const EditorToolbar = ({ roomName, onRun, onLanguageChange, onSave }) => {
           {theme === "vs-dark" ? (
             <Sun size={15} className="text-yellow-400" />
           ) : (
-            <Moon size={15} className="text-blue-400" />
+            <Moon size={15} className="text-violet-400" />
           )}
           <span className="hidden sm:block">
             {theme === "vs-dark" ? "Light" : "Dark"}

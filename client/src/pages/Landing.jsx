@@ -10,8 +10,8 @@ const FEATURES = [
     icon: Users,
     title: 'Real-Time Collaboration',
     description: 'Code together with teammates in real-time. See live cursors and changes as they happen.',
-    color: 'text-blue-400',
-    bg: 'bg-blue-500/10',
+    color: 'text-violet-400',
+    bg: 'bg-violet-500/10',
   },
   {
     icon: Zap,
@@ -31,8 +31,8 @@ const FEATURES = [
     icon: MessageSquare,
     title: 'Built-in Chat',
     description: 'Discuss code with teammates without leaving the editor. Chat history persists.',
-    color: 'text-purple-400',
-    bg: 'bg-purple-500/10',
+    color: 'text-pink-400',
+    bg: 'bg-pink-500/10',
   },
   {
     icon: History,
@@ -65,7 +65,7 @@ const Landing = () => {
       <nav className="border-b border-gray-800 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Code2 size={28} className="text-blue-500" />
+            <Code2 size={28} className="text-violet-500" />
             <span className="text-xl font-bold">CodeSync</span>
           </div>
 
@@ -73,7 +73,7 @@ const Landing = () => {
             {token ? (
               <button
                 onClick={() => navigate('/dashboard')}
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
+                className="flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
               >
                 Go to Dashboard
                 <ArrowRight size={16} />
@@ -88,7 +88,7 @@ const Landing = () => {
                 </button>
                 <button
                   onClick={() => navigate('/register')}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
+                  className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
                 >
                   Get Started Free
                 </button>
@@ -102,7 +102,7 @@ const Landing = () => {
 
         <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
           Code Together{' '}
-          <span className="text-blue-500">In Real-Time</span>
+          <span className="text-violet-500">In Real-Time</span>
         </h1>
 
         <p className="text-gray-400 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -113,7 +113,7 @@ const Landing = () => {
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <button
             onClick={() => navigate('/register')}
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl transition-colors font-semibold text-lg"
+            className="flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 rounded-xl transition-colors font-semibold text-lg"
           >
             Start Coding Free
             <ArrowRight size={20} />
@@ -199,7 +199,7 @@ const Landing = () => {
         </div>
       </section>
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="bg-blue-600/10 border border-blue-500/20 rounded-2xl p-10 text-center">
+        <div className="bg-violet-600/10 border border-violet-500/20 rounded-2xl p-10 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to collaborate?
           </h2>
@@ -208,7 +208,7 @@ const Landing = () => {
           </p>
           <button
             onClick={() => navigate('/register')}
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl transition-colors font-semibold text-lg mx-auto"
+            className="flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 rounded-xl transition-colors font-semibold text-lg mx-auto"
           >
             Create Your First Room
             <ArrowRight size={20} />
@@ -218,7 +218,7 @@ const Landing = () => {
       <footer className="border-t border-gray-800 px-6 py-8">
         <div className="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-2">
-            <Code2 size={20} className="text-blue-500" />
+            <Code2 size={20} className="text-violet-500" />
             <span className="font-semibold">CodeSync</span>
           </div>
           <p className="text-gray-500 text-sm">

@@ -47,7 +47,7 @@ class ErrorBoundary extends Component {
             <div className="flex items-center justify-center gap-3">
               <button
                 onClick={this.handleReset}
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl transition-colors font-medium text-sm"
+                className="flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-xl transition-colors font-medium text-sm"
               >
                 <RefreshCcw size={16} />
                 Try Again

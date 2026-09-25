@@ -42,7 +42,7 @@ const CodeEditor = ({ onMount }) => {
       loading={
         <div className="flex items-center justify-center h-full bg-gray-900">
           <div className="text-center">
-            <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
+            <div className="w-8 h-8 border-4 border-violet-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
             <p className="text-gray-400 text-sm">Loading Editor...</p>
           </div>
         </div>

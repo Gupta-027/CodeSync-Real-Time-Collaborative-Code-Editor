@@ -9,7 +9,7 @@ const ChatToggleButton = () => {
       onClick={toggleChat}
       className={`relative flex items-center gap-2 px-3 py-1.5 rounded-lg transition-colors text-sm ${
         isChatOpen
-          ? "bg-blue-600 text-white"
+          ? "bg-violet-600 text-white"
           : "bg-gray-800 hover:bg-gray-700 text-gray-300"
       }`}
     >

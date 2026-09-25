@@ -30,7 +30,7 @@ const Login = () => {
     <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="flex items-center justify-center gap-2 mb-8">
-          <Code2 size={28} className="text-blue-500" />
+          <Code2 size={28} className="text-violet-500" />
           <span className="text-xl font-bold text-white">CodeSync</span>
         </div>
         <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
@@ -51,7 +51,7 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30 transition-all text-sm"
+                className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all text-sm"
               />
             </div>
 
@@ -65,7 +65,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Your password"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30 transition-all text-sm"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all text-sm"
                 />
                 <button
                   type="button"
@@ -80,7 +80,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-colors text-sm mt-2"
+              className="w-full bg-violet-600 hover:bg-violet-700 disabled:bg-violet-800 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-colors text-sm mt-2"
             >
               {isLoading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -116,7 +116,7 @@ const Login = () => {
 
         <p className="text-center text-gray-500 text-sm mt-5">
           Don't have an account?{' '}
-          <Link to="/register" className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+          <Link to="/register" className="text-violet-400 hover:text-violet-300 font-medium transition-colors">
             Sign up free
           </Link>
         </p>
