@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { Eye, EyeOff, User, Mail, Lock, ArrowRight } from 'lucide-react'
 import useAuthStore from '../store/authStore'
 import toast from 'react-hot-toast'
-import AuthShell, { GoogleButton, inputCls } from '../components/UI/AuthShell'
+import AuthShell, { inputCls } from '../components/UI/AuthShell'
 
 const Register = () => {
   const [name, setName] = useState('')
@@ -36,14 +36,6 @@ const Register = () => {
     <AuthShell quote={['Two keyboards.', 'One file.']}>
       <h1 className="text-4xl font-bold tracking-tight">Create your account</h1>
       <p className="text-ink/60 mt-2 mb-8">It's free. Your first room is one click away.</p>
-
-      <GoogleButton />
-
-      <div className="flex items-center gap-3 my-6">
-        <div className="flex-1 h-px bg-ink/10"></div>
-        <span className="text-ink/40 text-xs uppercase tracking-widest">or</span>
-        <div className="flex-1 h-px bg-ink/10"></div>
-      </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

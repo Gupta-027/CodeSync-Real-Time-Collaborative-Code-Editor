@@ -20,7 +20,7 @@ const USE_CASES = [
 
 const FAQ = [
   { q: 'Is CodeSync free?', a: 'Yes. Create an account, open a room and start coding — no card needed.' },
-  { q: 'Do my teammates need an account?', a: 'Yes, everyone signs in (email or Google) and joins your room with its invite code. That keeps rooms private.' },
+  { q: 'Do my teammates need an account?', a: 'Yes, everyone signs in with email and joins your room with its invite code. That keeps rooms private.' },
   { q: 'Which languages can I run?', a: 'Python, JavaScript, TypeScript, C, C++, Java, Go, Rust and more — output shows up for everyone in the room.' },
   { q: 'What if someone breaks the code?', a: 'Rewind. Save snapshots yourself or rely on auto-save, then restore any earlier version.' },
 ]
